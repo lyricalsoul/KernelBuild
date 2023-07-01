@@ -4,6 +4,9 @@ if ! [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 echo "attempting to build a DEVELOPMENT kernel with all local variables and arguments"
+SDK_LIST = $(xcodebuild -showsdks)
+echo "xcode reports the following available SDKs"
+echo "$SDK_LIST"
 OSX_SDK = $(xcrun --sdk macosx14.0 --show-sdk-path)
 echo "using macOS SDK at $OSX_SDK"
 
