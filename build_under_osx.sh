@@ -4,11 +4,9 @@ if ! [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 echo "attempting to build a DEVELOPMENT kernel with all local variables and arguments"
-SDK_LIST = $(xcodebuild -showsdks)
-echo "xcode reports the following available SDKs"
-echo "$SDK_LIST"
-OSX_SDK = $(xcrun --sdk macosx14.0 --show-sdk-path)
-echo "using macOS SDK at $OSX_SDK"
+
+OSX_SDK = "/Applications/Xcode_15.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
+echo "using hardcoded macOS SDK at $OSX_SDK"
 
 cd xnu
 export CFLAGS_DEVELOPMENTARM64="-O0 -g -DKERNEL_STACK_MULTIPLIER=2"
