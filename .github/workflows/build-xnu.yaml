@@ -1,6 +1,9 @@
 name: 'Automatically build the XNU kernel'
 
 on:
+  push:
+    branches:
+      - 'main'
   release:
     types: [published]
 
