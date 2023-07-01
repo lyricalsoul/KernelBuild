@@ -16,4 +16,4 @@ jobs:
         with:
           submodules: 'true'
       - name: Build XNU
-        run: bash build_under_osx.sh
+        run: bash build_xnu.sh
