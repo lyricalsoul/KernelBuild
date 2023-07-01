@@ -5,7 +5,7 @@ fi
 
 echo "attempting to build a DEVELOPMENT kernel with all local variables and arguments"
 
-OSX_SDK = "/Applications/Xcode_15.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
+OSX_SDK="/Applications/Xcode_15.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
 echo "using hardcoded macOS SDK at $OSX_SDK"
 
 cd xnu
