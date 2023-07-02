@@ -2,7 +2,7 @@
 # This script is based on zhouwei's build-xnu-6153.141.1.sh.
 # For further information, refer to https://gist.github.com/zhuowei/69c886423642cd77fd2c010f4d54b1c4
 
-export DEVELOPER_DIR="/Applications/Xcode_15.0.app/Contents/Developer"
+export DEVELOPER_DIR="/Applications/Xcode_14.3.1.app/Contents/Developer"
 
 if ! [[ $OSTYPE == 'darwin'* ]]; then
   echo 'This command can only be ran on a macOS host. Sorry!'
@@ -16,7 +16,7 @@ umask 022
 set -ex
 
 # Get the SDK path.
-SDKPATH="$DEVELOPER_DIR/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
+SDKPATH="$DEVELOPER_DIR/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
 [ -d "${SDKPATH}" ]
 
 # Install AvailabilityVersions. This writes to ${SDKPATH}/usr/local/libexec.
