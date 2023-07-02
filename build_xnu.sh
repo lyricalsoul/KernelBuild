@@ -46,8 +46,6 @@ cd ..
 
 echo "attempting to build a DEVELOPMENT kernel with all local variables and arguments"
 cd xnu
-export CFLAGS_DEVELOPMENTX86_64="-O0 -g -DKERNEL_STACK_MULTIPLIER=2"
-export CXXFLAGS_DEVELOPMENTX86_64="-O0 -g -DKERNEL_STACK_MULTIPLIER=2"
 
 make BUILD_LTO=0 ARCH_CONFIGS="X86_64" \
 KERNEL_CONFIGS=DEVELOPMENT \
