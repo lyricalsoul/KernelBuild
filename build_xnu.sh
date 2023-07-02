@@ -16,7 +16,7 @@ set -ex
 export DEVELOPER_DIR="/Applications/Xcode_15.0.app/Contents/Developer"
 export SDKPATH="$DEVELOPER_DIR/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
 export TOOLCHAINPATH="$SDKPATH/../../Toolchains/XcodeDefault.xctoolchain"
-[[ -d "${SDKPATH}" ] && [ -d "${TOOLCHAINPATH}" ]
+[ -d "${SDKPATH}" ] && [ -d "${TOOLCHAINPATH}" ]
 
 # Install CTF tools from dtrace
 cd dtrace
