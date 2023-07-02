@@ -47,6 +47,10 @@ cd ..
 echo "attempting to build a DEVELOPMENT kernel with all local variables and arguments"
 cd xnu
 
+export CFLAGS_DEVELOPMENTX86_64="-O0 -g -DKERNEL_STACK_MULTIPLIER=2 -Wno-inconsistent-missing-override"
+export CXXFLAGS_DEVELOPMENTX86_64="-O0 -g -DKERNEL_STACK_MULTIPLIER=2 -Wno-inconsistent-missing-override"
+export CXXFLAGS="-Wno-inconsistent-missing-override"
+
 make BUILD_LTO=0 ARCH_CONFIGS="X86_64" \
 KERNEL_CONFIGS=DEVELOPMENT \
 SDK_ROOT=macosx -j8
