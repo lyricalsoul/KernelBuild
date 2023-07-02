@@ -30,7 +30,7 @@ cd ..
 cd xnu
 mkdir -p BUILD.hdrs/obj BUILD.hdrs/sym BUILD.hdrs/dst
 make installhdrs SDKROOT=macosx ARCH_CONFIGS=X86_64 SRCROOT="${PWD}" OBJROOT="${PWD}/BUILD.hdrs/obj" SYMROOT="${PWD}/BUILD.hdrs/sym" DSTROOT="${PWD}/BUILD.hdrs/dst" HOST_OS_VERSION="13.4"
-xcodebuild installhdrs -project libsyscall/Libsyscall.xcodeproj -sdk macosx -UseModernBuildSystem=NO ARCHS="x86_64" SRCROOT="${PWD}/libsyscall" OBJROOT="${PWD}/BUILD.hdrs/obj" SYMROOT="${PWD}/BUILD.hdrs/sym" DSTROOT="${PWD}/BUILD.hdrs/dst"
+xcodebuild installhdrs -project libsyscall/Libsyscall.xcodeproj -sdk macosx ARCHS="x86_64" SRCROOT="${PWD}/libsyscall" OBJROOT="${PWD}/BUILD.hdrs/obj" SYMROOT="${PWD}/BUILD.hdrs/sym" DSTROOT="${PWD}/BUILD.hdrs/dst"
 # Set permissions correctly before dittoing over the SDK.
 sudo chown -R root:wheel BUILD.hdrs/dst/
 sudo ditto BUILD.hdrs/dst "${SDKPATH}"
@@ -46,7 +46,7 @@ cd ..
 # ${SDKPATH}/usr/local.
 cd libdispatch
 mkdir -p obj sym dst
-xcodebuild install -project libdispatch.xcodeproj -target libfirehose_kernel -sdk macosx -UseModernBuildSystem=NO ARCHS="x86_64" SRCROOT="${PWD}" OBJROOT="${PWD}/obj" SYMROOT="${PWD}/sym" DSTROOT="${PWD}/dst"
+xcodebuild install -project libdispatch.xcodeproj -target libfirehose_kernel -sdk macosx ARCHS="x86_64" SRCROOT="${PWD}" OBJROOT="${PWD}/obj" SYMROOT="${PWD}/sym" DSTROOT="${PWD}/dst"
 sudo ditto "${PWD}/dst/usr/local" "${SDKPATH}/usr/local"
 cd ..
 
