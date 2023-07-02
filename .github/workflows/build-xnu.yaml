@@ -17,3 +17,8 @@ jobs:
           submodules: 'true'
       - name: Build XNU
         run: bash build_xnu.sh
+      - name: Upload raw kernel (no KC)
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel.development
+          path: xnu/BUILD/obj/kernel.development

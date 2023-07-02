@@ -10,3 +10,6 @@
 [submodule "AvailabilityVersions"]
 	path = AvailabilityVersions
 	url = https://github.com/apple-oss-distributions/AvailabilityVersions
+[submodule "dtrace"]
+	path = dtrace
+	url = https://github.com/apple-oss-distributions/dtrace
