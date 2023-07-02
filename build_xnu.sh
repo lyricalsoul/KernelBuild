@@ -21,7 +21,7 @@ export TOOLCHAINPATH="$DEVELOPER_DIR/Toolchains/XcodeDefault.xctoolchain"
 # Install CTF tools from dtrace
 cd dtrace
 xcodebuild install -sdk macosx -target ctfconvert -target ctfdump -target ctfmerge ARCHS='x86_64' VALID_ARCHS='x86_64' SRCROOT="${PWD}" OBJROOT="${PWD}/obj" SYMROOT="${PWD}/sym" DSTROOT="${PWD}/dst" CODE_SIGNING_ALLOWED=NO
-sudo ditto "${PWD}/dst/${TOOLCHAINPATH}" "${TOOLCHAINPATH}"
+sudo ditto "${PWD}/dst" "${TOOLCHAINPATH}"
 cd ..
 
 # Install AvailabilityVersions. This writes to ${SDKPATH}/usr/local/libexec.
